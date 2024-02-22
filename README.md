@@ -215,3 +215,8 @@ labels from every line of the `writing/reflection.md` file. This means that you
 should not simply delete the `TODO` marker but instead delete the entire prompt
 so that your reflection is a document that contains polished technical writing
 that is suitable for publication on your professional web site.
+
+```python
+lines = []
+for line in lines:
+```
