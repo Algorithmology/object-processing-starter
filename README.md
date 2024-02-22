@@ -186,7 +186,7 @@ project. Please make sure that, during the second week of this assignment, you
 meet with the course instructor to receive feedback on the design of your
 experiment before you embark on conducting the experiments and analyzing the
 data. Finally, here are other issues that you should keep in mind as you work
-on the `containmentcheck` program:
+on the `objectprocessor` program:
 
 - You must implement test cases for all of the untested modules, excepting the
 `main` module, while further ensuring that the test suite achieves the desired
