@@ -62,7 +62,7 @@ output
 
 ### Use two fenced code blocks to provide output from five different runs of `objectprocessor` with five different inputs
 
-TODO: Provide the complete command-line for your use of the `objectprocessor` program
+TODO: For each output, provide the complete command-line for your use of the `objectprocessor`
 
 #### Provide the command the output for the first run of the `objectprocessor`
 
