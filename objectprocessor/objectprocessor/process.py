@@ -1,7 +1,5 @@
 """Extract and save the data about the person from the CSV file."""
 
-import csv
-import sys
 from typing import List
 
 from rapidfuzz import fuzz
@@ -10,16 +8,9 @@ from objectprocessor import approach, person
 
 FUZZY_MATCH_THRESHOLD = 90
 
-# Sample of the data set:
-
-# Mrs. Natalie Lee,Bolivia,036-126-0340x0094,"Engineer, building services",david82@example.org
-# Michael Anderson,Honduras,(627)610-9166,Writer,ryan23@example.org
-# Cindy Burns,Dominican Republic,(102)481-3875,"Pharmacist, hospital",rtorres@example.org
-# Jason Bailey,Falkland Islands (Malvinas),+1-552-912-2326,Leisure centre manager,daniel51@example.com
-# Andrew Johnson,Portugal,733-554-3949,"Engineer, site",michael94@example.com
-# Carol Poole,Isle of Man,365.529.7270,Pensions consultant,piercebrenda@example.com
-
 # TODO: look at the entire data set inside of the inputs/people.txt
+# TODO: you may need to create and use different data sets, depending
+#       on the experiments that you must conduct to answer your RQs
 
 
 def extract_person_data(data: str) -> List[person.Person]:
