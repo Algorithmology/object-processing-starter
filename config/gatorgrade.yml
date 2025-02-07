@@ -8,13 +8,105 @@ setup: |
 # Checks on Files {{{
 
 # perform checks on a file
-- objectprocessor/objectprocessor/__init__.py:
-    - description: Ensure that the __init__.py file exists in the objectprocessor/objectprocessor/ directory
+- objectprocessor/tests/__init__.py:
+    - description: Ensure that the __init__.py file exists in the objectprocessor/tests/ directory
       check: ConfirmFileExists
 
 # perform checks on a file
-- objectprocessor/tests/__init__.py:
-    - description: Ensure that the __init__.py file exists in the objectprocessor/tests/ directory
+- objectprocessor/tests/test_approach.py:
+    - description: Ensure that the test_approach.py file exists in the objectprocessor/tests/ directory
+      check: ConfirmFileExists
+    - description: Create a sufficient number of docstring (i.e., multiple-line) comments in test_constants.py
+      check: CountMultipleLineComments
+      options:
+        language: "Python"
+        count: 2
+        exact: false
+    - description: Complete all TODOs, remove the TODO markers, and rewrite comments for test_approach.py
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+    - description: Create a sufficient number of single-line comments in test_approach.py
+      check: CountSingleLineComments
+      options:
+        language: "Python"
+        count: 2
+        exact: false
+
+# perform checks on a file
+- objectprocessor/tests/test_constants.py:
+    - description: Ensure that the test_constants.py file exists in the objectprocessor/tests/ directory
+      check: ConfirmFileExists
+    - description: Create a sufficient number of docstring (i.e., multiple-line) comments in test_constants.py
+      check: CountMultipleLineComments
+      options:
+        language: "Python"
+        count: 2
+        exact: false
+    - description: Complete all TODOs, remove the TODO markers, and rewrite comments for test_constants.py
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+    - description: Create a sufficient number of single-line comments in test_constants.py
+      check: CountSingleLineComments
+      options:
+        language: "Python"
+        count: 2
+        exact: false
+
+# perform checks on a file
+- objectprocessor/tests/test_person.py:
+    - description: Ensure that the test_person.py file exists in the objectprocessor/tests/ directory
+      check: ConfirmFileExists
+    - description: Create a sufficient number of docstring (i.e., multiple-line) comments in test_constants.py
+      check: CountMultipleLineComments
+      options:
+        language: "Python"
+        count: 2
+        exact: false
+    - description: Complete all TODOs, remove the TODO markers, and rewrite comments for test_person.py
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+    - description: Create a sufficient number of single-line comments in test_person.py
+      check: CountSingleLineComments
+      options:
+        language: "Python"
+        count: 2
+        exact: false
+
+# perform checks on a file
+- objectprocessor/tests/test_process.py:
+    - description: Ensure that the test_process.py file exists in the objectprocessor/tests/ directory
+      check: ConfirmFileExists
+    - description: Create a sufficient number of docstring (i.e., multiple-line) comments in test_constants.py
+      check: CountMultipleLineComments
+      options:
+        language: "Python"
+        count: 2
+        exact: false
+    - description: Complete all TODOs, remove the TODO markers, and rewrite comments for test_process.py
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+    - description: Create a sufficient number of single-line comments in test_process.py
+      check: CountSingleLineComments
+      options:
+        language: "Python"
+        count: 1
+        exact: false
+
+# perform checks on a file
+- objectprocessor/objectprocessor/__init__.py:
+    - description: Ensure that the __init__.py file exists in the objectprocessor/objectprocessor/ directory
       check: ConfirmFileExists
 
 # perform checks on a file
@@ -255,6 +347,14 @@ setup: |
   options:
     command: 'cd objectprocessor && poetry run objectprocessor --search-term john79 --attribute email --input-file input/people.txt --output-file output/people.txt'
     count: 7
+    exact: false
+
+# run the program and confirm correct number of lines in the output
+- description: Run the program and confirm the correct number of non-blank lines in the output, using ratio-based fuzzy search
+  check: CountCommandOutput
+  options:
+    command: 'cd objectprocessor && poetry run objectprocessor --search-term rtorres@example.org --attribute email --input-file input/people.txt --output-file output/people.txt --approach ratio'
+    count: 20
     exact: false
 
 # }}}
