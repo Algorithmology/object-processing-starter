@@ -177,6 +177,12 @@ answer all of your research questions and, if possible, use the empirical
 results to classify the likely worst-case time complexity of each of the
 algorithms that you studied in this algorithm engineering project.
 
+### First Data Table
+
+### Second Data Table
+
+### Third Data Table
+
 ## Performance Analysis
 
 TODO: Provide at least three paragraphs that explain which algorithms inside of
