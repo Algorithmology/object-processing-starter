@@ -1,4 +1,4 @@
-# 🔬 Object Processing
+# :microscope: Object Processing
 
 [![build](../../actions/workflows/build.yml/badge.svg)](../../actions/)
 ![Platforms: Linux, MacOS, Windows](https://img.shields.io/badge/Platform-Linux%20%7C%20MacOS%20%7C%20Windows-blue.svg)
@@ -6,20 +6,20 @@
 [![Commits: Conventional](https://img.shields.io/badge/Commits-Conventional-blue.svg)](https://www.conventionalcommits.org/en/v1.0.0/)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 
-## ✨ Table of Contents
+## :sparkles: Table of Contents
 
-<!---toc start-->
+<!--toc start-->
 
-* [🔬 Object Processing](#-object-processing)
-  * [✨ Table of Contents](#-table-of-contents)
-  * [🏁 Introduction](#-introduction)
-  * [🤝 Seeking Assistance](#-seeking-assistance)
-  * [🛫 Project Overview](#-project-overview)
-  * [🎉 Program Specification](#-program-specification)
+- [:microscope: Object Processing](#microscope-object-processing)
+  - [:sparkles: Table of Contents](#table-of-contents)
+  - [:checkered_flag: Introduction](#checkeredflag-introduction)
+  - [:handshake: Seeking Assistance](#handshake-seeking-assistance)
+  - [:airplane: Project Overview](#airplane-project-overview)
+  - [:tada: Program Specification](#tada-program-specification)
 
-<!---toc end-->
+<!--toc end-->
 
-## 🏁 Introduction
+## :checkered_flag: Introduction
 
 If you are a student completing this project as part of a class at Allegheny
 College, you can check the schedule on the course web site for the due date or
@@ -29,23 +29,18 @@ the content provided in the `README.md` file for this GitHub repository is an
 overview of the project and thus may not include the details for every step
 needed to successfully complete every project deliverable. This means that you
 may need to schedule a meeting during the course instructor's office hours to
-discuss aspects of this project. Finally, it is important to point out that
-your repository for this project was created from the GitHub repository
-template called
-[object-processing-starter](https://github.com/Algorithmology/object-processing-starter);
-you can check this repository for any updates to this project's documentation
-or source code!
+discuss aspects of this project.
 
-## 🤝 Seeking Assistance
+## :handshake: Seeking Assistance
 
-Even though the course instructor will have covered all of the concepts central
+Even though the course instructor will have covered all the concepts central
 to this project before you start to work on it, please note that not every
 detail needed to successfully complete the assignment will have been covered
 during prior classroom sessions. This is by design as an important skill that
 you must practice as an algorithm engineer is to search for and then understand
 and ultimately apply the technical content found in additional resources.
 
-## 🛫 Project Overview
+## :airplane: Project Overview
 
 This project invites you to implement and use a program called `objectprocessor`
 that conducts an experiment to evaluate the performance of searching for data
@@ -72,9 +67,9 @@ will do so using one of these approaches:
   - `weighted_ratio`
   - `quick_ratio`
 
-In addition to providing all of the functionality needed for searching any
+In addition to providing all the functionality needed for searching any
 attribute of the `Person` class, the `objectprocessor` program should be able
-to save all of the matching records inside of a specified file. The
+to save all the matching records inside of a specified file. The
 `objectprocessor` program should also included "timing instrumentation" that
 records the cost associated with various aspects of specified process such as
 (i) the time needed to read or write the text file, (ii) the time needed to
@@ -85,44 +80,50 @@ the functions from the `rapidfuzz` package) on a specific attribute of a
 [timeit](https://docs.python.org/3/library/timeit.html) package to measure the
 performance of the `in` operator for different data containers, following one
 of the approaches outlined in the article called [measure execution time with
-timeit in Python](https://note.nkmk.me/en/python-timeit-measure/). As you
-complete this engineering effort you will experimentally evaluate the claims in
-the following articles about the best way to determine if a specific value
-exists inside of a data container.
+timeit in Python](https://note.nkmk.me/en/python-timeit-measure/).
 
 After cloning this repository to your computer, please take the following steps
 to get started on the project:
 
-- To install the necessary software for running the `objectprocessor` program that
-you will create as a part of this project, you should install the
-[`devenv`](https://devenv.sh/getting-started/) tool, bearing in mind that it is
-not necessary for you to install the `cachix` program referenced by these
-installation instructions. Please note that students who are using Windows 11
-should first install Windows subsystem for Linux (`wsl2`) before attempting to
-install `devenv`. Once you have installed `devenv` and cloned this repository to
-your computer, you can `cd` into the directory that contains the
-`pyproject.toml` file and then type `devenv shell`. It is important to note that
-the first time you run this command it may complete numerous steps and take a
-considerable amount of time.
+- To install the necessary software for running the `objectprocessor` program
+that you will create as a part of this project, you may consider installing and
+using the [`devenv`](https://devenv.sh/getting-started/) tool, bearing in mind
+that it is not necessary for you to install the `cachix` program that may be
+referenced by these installation instructions. Please note that students who are
+using Windows 11 should first install Windows subsystem for Linux (`wsl2`)
+before attempting to install `devenv`. Once you have installed `devenv` and
+cloned this repository to your computer, you can `cd` into the directory that
+contains the `pyproject.toml` file and then type `devenv shell`. It is important
+to note that the first time you run this command it may complete numerous steps
+and take a considerable amount of time.
 - Once this command completes correctly, you will have a Python development
-environment that contains Python `3.11.6` and Poetry `1.7.1`! You can verify
+environment that contains a recent version of Python and Poetry! You can verify
 that you have the correct version of these two programs by typing:
-  - `python --version` (note that you should see `3.11.6`)
-  - `poetry --version` (note that you should see `1.7.1`)
+  - `python --version`
+  - `poetry --version`
+- If you do not see a recent version of Python after typing the two
+aforementioned commands, then it is possible that some part of the installation
+process did not work correctly. If that occurs, then please read the following
+suggestions and talk with the course instructor and a student technical leader
+about what to do next.
 - If some aspect of the installation with `devenv` did not work correctly, then
 please resolve what is wrong before proceeding further! Alternatively, you may
-install the aforementioned versions of Python and Poetry on your laptop. With
-that said, please make sure that you only use the specified versions of Python
-and Poetry to complete this project. This means that, to ensure that the results
-from running the micro-benchmarks are consistent and, as best as is possible,
-comparable to the results from other computers, you should use exactly the
-specified version of either Python or Poetry.
+install the aforementioned versions of Python and Poetry on your laptop using a
+tool like [`mise`](https://mise.jdx.dev/). With that said, please make sure that
+you use the most recent version of Python and Poetry to complete this project
+and, whenever possible, those versions match the ones chosen in GitHub Actions.
+This means that, to ensure that the results from running the experiments are
+consistent and, as best as is possible, comparable to the results from other
+computers, you should use exactly the same version of Python and Poetry on your
+laptop and in GitHub Actions. For instance, when you run `containmentcheck` in
+GitHub Actions, you should normally see that it is using at least Poetry version
+`1.8.5` and Python version `3.12.8`.
 - Before moving to the next step, you may need to again type `poetry install` in
-order to avoid the appearance of warnings when you next run the `objectprocessor`
-program. Now you can type the command `poetry run objectprocessor --help` and
-explore how to use the program.
+order to avoid the appearance of warnings when you next run the
+`objectprocessor` program. Now you can type the command `poetry run
+objectprocessor --help` and explore how to use the program.
 
-## 🎉 Program Specification
+## :tada: Program Specification
 
 Before implementing the program so that it adheres to the following requirements
 and produces the expected output, please note that the program will not work
@@ -155,7 +156,7 @@ them at ztorres@example.org
 ```
 
 Please note that your implementation of the `objectprocessor` program should
-work for all of the specified experimental configurations in the introduction
+work for all the specified experimental configurations in the introduction
 to the project and in the `writing/reflection.md` file. For instance, this
 means that `objectprocessor` should be able to determine if a provided search
 string matches any of the possible attributes of an instance of the `Person`
@@ -186,9 +187,17 @@ project. Please make sure that, during the second week of this assignment, you
 meet with the course instructor to receive feedback on the design of your
 experiment before you embark on conducting the experiments and analyzing the
 data. Finally, here are other issues that you should keep in mind as you work
-on the `objectprocessor` program:
+on the `containmentcheck` program:
 
-- You must implement test cases for all of the untested modules, excepting the
+- Once you have defined your research questions and received approval from the
+course instructor to conduct an experiment that will answer them, you will
+should decide where you will place timing instrumentation into the modules of
+the program that contain the functionality that you will be benchmarking.
+- To collect the performance data you should consider the use of Python packages
+such as `timeit` or `time`. If you decide that other time packages are more
+appropriate for your use case, then you may use them provided that you justify
+your decision in a suitable section of the `writing/reflection.md` file.
+- You must implement test cases for all the untested modules, excepting the
 `main` module, while further ensuring that the test suite achieves the desired
 level of code coverage. It is important to note that the coverage report
 produced by the `pytest-cov` plugin will, by default, only report the coverage
@@ -203,20 +212,15 @@ automated grading checks provided by
 repository's base directory, run the automated grading checks by typing
 `gatorgrade --config config/gatorgrade.yml`.
 - You may also review the output from running GatorGrader in GitHub Actions.
-- Don't forget to provide all of the required responses to the technical writing
+- Don't forget to provide all the required responses to the technical writing
 prompts in the `writing/reflection.md` file.
 - Please make sure that you completely delete the `TODO` markers and their
-labels from all of the provided source code. This means that instead of only
+labels from all the provided source code. This means that instead of only
 deleting the `TODO` marker from the code you should delete the `TODO` marker and
 the entire prompt and then add your own comments to demonstrate that you
-understand all of the source code in this project.
+understand all the source code in this project.
 - Please make sure that you also completely delete the `TODO` markers and their
 labels from every line of the `writing/reflection.md` file. This means that you
 should not simply delete the `TODO` marker but instead delete the entire prompt
 so that your reflection is a document that contains polished technical writing
 that is suitable for publication on your professional web site.
-
-```python
-lines = []
-for line in lines:
-```
